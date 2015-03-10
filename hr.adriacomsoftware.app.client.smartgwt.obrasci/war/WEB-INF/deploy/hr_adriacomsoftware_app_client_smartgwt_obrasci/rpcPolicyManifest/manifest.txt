@@ -1,0 +1,2 @@
+# Module hr_adriacomsoftware_app_client_smartgwt_obrasci
+# RPC service class, partial path of RPC policy file

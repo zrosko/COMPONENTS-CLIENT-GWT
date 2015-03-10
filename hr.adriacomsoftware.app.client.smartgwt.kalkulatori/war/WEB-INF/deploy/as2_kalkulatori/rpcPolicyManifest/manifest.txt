@@ -1,0 +1,2 @@
+# Module as2_kalkulatori
+# RPC service class, partial path of RPC policy file

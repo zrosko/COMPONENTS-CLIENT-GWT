@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>ServletJSON</servlet-name>
+		<servlet-class>hr.adriacomsoftware.inf.server.transport.json.AS2TransportServerJson</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletJSON</servlet-name>
+		<url-pattern>/hr_adriacomsoftware_app_client_smartgwt_kpi/servletjson</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>FrontControllerServlet</servlet-name>
+		<servlet-class>hr.adriacomsoftware.inf.server.controllers.AS2FrontControllerHttp</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>FrontControllerServlet</servlet-name>
+		<url-pattern>/front</url-pattern>
+	</servlet-mapping>
+	<!-- Default page to serve -->
+	<welcome-file-list>
+    <welcome-file>Hr_adriacomsoftware_app_client_smartgwt_portal.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

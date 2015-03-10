@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5" xmlns="http://java.sun.com/xml/ns/javaee">
+
+		<servlet>
+		<servlet-name>TransportServletJSON</servlet-name>
+		<servlet-class>hr.adriacomsoftware.inf.server.transport.json.TransportServletJSON</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>TransportServletJSON</servlet-name>
+		<url-pattern>/json_servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AS2upload</servlet-name>
+		<servlet-class>hr.adriacomsoftware.inf.server.transport.json.AS2FileUploadServlet</servlet-class>
+	</servlet>
+ 	
+	<servlet-mapping>
+   		<servlet-name>AS2upload</servlet-name> <!--  bitno za upload -->
+   		<url-pattern>/module/json_servlet_fileupload</url-pattern>
+ 	</servlet-mapping>
+	
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Hr_adriacomsoftware_app_client_smartgwt_ura.html</welcome-file>
+	</welcome-file-list>
+
+</web-app>

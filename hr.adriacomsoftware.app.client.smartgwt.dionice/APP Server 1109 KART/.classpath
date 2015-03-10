@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/EMAIL"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/PENTAHO"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/RDBMS"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SERVER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.app.server.services"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.resources.server"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM COMMON"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM SERVER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.app.server.karticno"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

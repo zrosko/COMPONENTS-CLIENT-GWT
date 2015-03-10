@@ -1,0 +1,2 @@
+serviceClass: hr.adriacomsoftware.inf.client.smartgwt.transport.rpc.GreetingService
+path: D6E3F85ECDD9CCD10422CB292D6A5449.gwt.rpc

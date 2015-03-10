@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SMART_GWT"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Infrastructure 4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.app.client.smartgwt.karticno.gr"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Adriacom Software PLATFORM Common"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/APP Server 1109 KART"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM COMMON"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AS2 PLATFORM SERVER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/hr.adriacomsoftware.app.client.smartgwt.resources"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

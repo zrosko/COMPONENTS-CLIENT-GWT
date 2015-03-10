@@ -1,0 +1,8 @@
+<list>
+<record>
+    <column1Icon>novi_dokument</column1Icon>
+    <column1Name>Vrste dokumenta</column1Name>
+    <column1DisplayName>&lt;b&gt;Vrste dokumenta&lt;/b&gt;&lt;br /&gt;</column1DisplayName>
+    <column1Description>&lt;b&gt;Vrste dokumenta&lt;/b&gt;&lt;br /&gt;Dodaj ili uredi vrstu dokumenta.</column1Description>
+</record>
+</list>

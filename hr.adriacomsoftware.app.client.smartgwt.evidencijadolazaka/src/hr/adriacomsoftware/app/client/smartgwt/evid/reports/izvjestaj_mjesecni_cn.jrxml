@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="izvjestaj_mjesecni_cn" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_1}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="style1" mode="Transparent" forecolor="#009933" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_6}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="style1" mode="Transparent" forecolor="#009933" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_1" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_1}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_1" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_2" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_2}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_2" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_3" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_3}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_3" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_4" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_4}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_4" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_5" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_5}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_5" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_6" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_6}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_6" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_7" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_7}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_7" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<style name="sati_8" isDefault="false" fill="Solid" markup="none">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($F{sati_8}.intValue()==0)]]></conditionExpression>
+			<style isDefault="false" style="sati_8" mode="Transparent" forecolor="#FFFFFF" fill="Solid" markup="styled" fontName="Arial" fontSize="8" pdfEncoding="Cp1250">
+				<pen lineWidth="0.0" lineColor="#FF6666"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#000000"/>
+				</box>
+			</style>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[select * from oltp_prod.dbo.fn_tbl_place_evidencija_mjesecna_izvjestaj(10,2014)
+where radnik_id in (95,104,127,181,285)
+order by naziv
+
+/*exec oltp_prod.dbo.stp_place_facade @izvjestaj='mjesecni', @mjesec=10,@godina=2014*/]]>
+	</queryString>
+	<field name="radnik_id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_spica_oj" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="naziv" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="broj_dana_rada" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="moguci_broj_sati" class="java.lang.Short">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ukupni_broj_sati" class="java.lang.Short">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_1" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_2" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_2" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_3" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_3" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_4" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_4" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_5" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_6" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_6" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_7" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_7" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sif_8" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sati_8" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="mjesec" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="godina" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="grupa" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[null]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="0" y="8" width="179" height="28" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box leftPadding="5">
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Naziv]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="179" y="8" width="39" height="28" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Ukupno
+sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="218" y="8" width="39" height="28" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Mogući
+sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="257" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="289" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="321" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="353" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="385" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="417" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="449" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="481" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="513" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="545" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="577" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="609" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="641" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="673" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="705" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Šifra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="737" y="22" width="32" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Sati]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="769" y="8" width="32" height="28" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[Br.
+dana]]></text>
+				</staticText>
+				<staticText>
+					<reportElement key="staticText-1" mode="Transparent" x="257" y="8" width="512" height="14" forecolor="#003399" backcolor="#FFFFFF"/>
+					<box>
+						<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+						<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[R E K A P I T U L A C I J A   S A T I]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="71" splitType="Stretch">
+			<image scaleImage="FillFrame" hAlign="Left" vAlign="Top" isUsingCache="false">
+				<reportElement key="image-1" mode="Opaque" x="10" y="0" width="50" height="50" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<graphicElement fill="Solid">
+					<pen lineWidth="0.0" lineStyle="Solid"/>
+				</graphicElement>
+				<imageExpression class="java.net.URL"><![CDATA[new java.net.URL("http://portal:8080/jaba_logo.jpg")]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement key="staticText-24" mode="Opaque" x="0" y="57" width="802" height="14" forecolor="#FFFFFF" backcolor="#006699"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Podaci o korištenju radnog vremena za " + $F{mjesec}.toString()+"/"+$F{godina}.toString()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="24" y="0" width="155" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{naziv}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="179" y="0" width="39" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{ukupni_broj_sati}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="218" y="0" width="39" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{moguci_broj_sati}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="257" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_1" stretchType="RelativeToBandHeight" x="289" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="321" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_2" stretchType="RelativeToBandHeight" x="353" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_2}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="385" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_3" stretchType="RelativeToBandHeight" x="417" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_3}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="449" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_4" stretchType="RelativeToBandHeight" x="481" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_4}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="513" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_5" stretchType="RelativeToBandHeight" x="545" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_5}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="577" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_6" stretchType="RelativeToBandHeight" x="609" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_6}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="641" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_7" stretchType="RelativeToBandHeight" x="673" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_7}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="705" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{sif_8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement style="sati_8" stretchType="RelativeToBandHeight" x="737" y="0" width="32" height="14"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="10" pdfEncoding="Cp1250"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{sati_8}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="769" y="0" width="32" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#003366"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{broj_dana_rada}]]></textFieldExpression>
+			</textField>
+			<textField pattern="" isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="0" y="0" width="24" height="14" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="10" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1250" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch">
+			<textField pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" mode="Transparent" x="593" y="2" width="174" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$V{PAGE_NUMBER} + "/"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="" isBlankWhenNull="false">
+				<reportElement key="textField" mode="Transparent" x="767" y="2" width="36" height="12" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" lineSpacing="Single" markup="none">
+					<font fontName="Arial" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

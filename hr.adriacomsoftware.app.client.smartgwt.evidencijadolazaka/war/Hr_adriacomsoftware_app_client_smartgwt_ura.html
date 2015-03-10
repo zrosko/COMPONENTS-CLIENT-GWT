@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the     -->
+<!-- browser's rendering engine into                -->
+<!-- "Standards Mode". Replacing this declaration   -->
+<!-- with a "Quirks Mode" doctype is not supported. -->
+
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=8,9" > 	
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    	<title>URA</title>
+    	<script type="text/javascript" charset="UTF-8" src="module/module.nocache.js"></script>
+  	</head>
+	<body>
+		<!--adding loading indicator while the app is being loaded-->
+  		<div id="loadingWrapper">
+			<div id="loading">
+				<div class="loadingIndicator">
+    				<img src="module/images/AS2Loading.gif" width="48" height="48" style="margin-right:8px;float:left;vertical-align:top;"/>
+    				<div id="loadingTitle" style="float:left; width:100px;">URA</div><br/>
+    				<span id="loadingMsg">Učitavanje slika i stilova...</span>
+    			</div>
+    		</div>
+		</div>
+		<!--load skin-->
+		<script type="text/javascript">document.getElementById('loadingMsg').innerHTML = 'Učitavanje izgleda...';</script> <!-- Loading skin... -->
+		<script type="text/javascript">
+		 			document.write("<"+"script src=module/sc/skins/EnterpriseBlue/load_skin.js isc_version=7.1.js><"+"/script>"); -->
+		</script>
+		<script type="text/javascript">document.getElementById('loadingMsg').innerHTML = 'Učitavanje aplikacije<br>Molimo pričekajte...';</script>
+   	 	<!-- OPTIONAL: include this if you want history support -->
+    	<iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1' style="position:absolute;width:0;height:0;border:0"></iframe>
+   		<!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+    	<noscript>
+      		<div style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+        		Vaš pretraživač mora imati omogućen JavaScript!
+      		</div>
+    	</noscript>
+  	</body>
+</html>
