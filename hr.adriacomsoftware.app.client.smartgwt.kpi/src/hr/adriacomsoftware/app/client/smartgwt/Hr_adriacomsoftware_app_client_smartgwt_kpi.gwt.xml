@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.1//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.1/distro-source/core/src/gwt-module.dtd">
+<module rename-to='module'>
+	<!-- Charts -->
+	<!-- Google Visualization API Charts <inherits name='com.google.gwt.visualization.Visualization' 
+		/> -->
+	<!-- GWT-HIGHCHARTS -->
+	<!-- GWT.getModuleBaseForStaticFiles() odrediti verzije highcharta i staviti 
+		ih kao resurse projekta -->
+	<inherits name="org.moxieapps.gwt.highcharts.Highcharts" />
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- old	<script -->
+<!-- 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+	<!-- Load from web -->
+	<!-- <script src="http://code.highcharts.com/3.0.4/highcharts.js"></script> -->
+	<!-- <script src="http://code.highcharts.com/3.0.4/highcharts-more.js"></script> -->
+	<!-- HIGHSTOCK -->
+	<!-- <script src="http://code.highcharts.com/stock/1.2.5/highstock.js"></script> -->
+	<!-- <script src="http://code.highcharts.com/stock/1.2.5/highcharts-more.js"></script> -->
+	<script src="http://code.highcharts.com/stock/highstock.js"></script>
+	<script src="http://code.highcharts.com/stock/highcharts-more.js"></script>
+	<script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+	<!-- <script src="http://code.highcharts.com/3.0.0/themes/dark-blue.js"></script> -->
+	<!-- Botuni za export chartova -->
+	<!-- <script src="http://code.highcharts.com/3.0.0/modules/exporting.js"></script> -->
+	<!--GWT-Highcharts 1.5.0 <script src="../charts/gwthighcharts/1.5.0/js/highcharts.js"></script> 
+		<script src="../charts/gwthighcharts/1.5.0/js/highcharts-more.js"></script> -->
+	<!-- <script src="../charts/gwthighcharts/javascript/highstock.js"></script> -->
+	<!-- <script src="../charts/gwthighcharts/javascript/highcharts-all.js"></script> -->
+	<!--<script src="../charts/gwthighcharts/javascript/themes/grid.js"></script> -->
+	<!--<script src="../charts/gwthighcharts/1.5.0/js/modules/exporting.js"></script> -->
+	<!--GWT-Highcharts 1.6.0 -->
+	<!-- <script src="/charts/gwthighcharts/1.6.0/js/highcharts.js"></script> -->
+	<!-- <script src="/charts/gwthighcharts/1.6.0/js/highcharts-more.js"></script> -->
+	<!-- <script src="/charts/gwthighcharts/1.6.0/js/modules/exporting.js"></script> -->
+	<!-- FUSION CHARTS -->
+	<!-- <inherits name="com.smartgwt.PluginBridgesWidgets" /> -->
+	<!-- <script src="../charts/fusioncharts/javascript/FusionCharts.js"></script> -->
+	<source path='kpi' />
+	<public path='kpi'>
+		<include name="resources/reports/*" />
+	</public>
+</module>
+
+
+
