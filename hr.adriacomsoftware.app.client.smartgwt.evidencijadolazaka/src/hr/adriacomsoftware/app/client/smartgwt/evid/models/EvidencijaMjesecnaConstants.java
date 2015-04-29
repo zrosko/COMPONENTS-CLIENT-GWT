@@ -1,5 +1,5 @@
 package hr.adriacomsoftware.app.client.smartgwt.evid.models;
-
+//
 public interface EvidencijaMjesecnaConstants {
 	public static String EVIDMJ__RADNIK_ID = "radnik_id";
 	public static String EVIDMJ__ID_SPICA_OJ = "id_spica_oj";

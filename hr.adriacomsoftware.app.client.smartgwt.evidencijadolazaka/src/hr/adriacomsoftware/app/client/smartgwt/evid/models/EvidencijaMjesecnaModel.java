@@ -1,5 +1,5 @@
 package hr.adriacomsoftware.app.client.smartgwt.evid.models;
-
+//
 import hr.adriacomsoftware.inf.client.smartgwt.models.AS2RestJSONDataSource;
 import hr.adriacomsoftware.inf.client.smartgwt.types.AS2DataSourceField;
 import hr.adriacomsoftware.inf.client.smartgwt.types.AS2Field;
