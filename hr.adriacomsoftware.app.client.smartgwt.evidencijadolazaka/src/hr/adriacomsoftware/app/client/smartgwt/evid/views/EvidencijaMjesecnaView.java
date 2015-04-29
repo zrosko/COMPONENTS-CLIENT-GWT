@@ -1,5 +1,5 @@
 package hr.adriacomsoftware.app.client.smartgwt.evid.views;
-//
+
 import hr.adriacomsoftware.app.client.smartgwt.evid.models.EvidencijaDolazakaModel;
 import hr.adriacomsoftware.app.client.smartgwt.evid.models.EvidencijaDolazakaSifrarnikModel;
 import hr.adriacomsoftware.app.client.smartgwt.evid.models.EvidencijaMjesecnaConstants;
