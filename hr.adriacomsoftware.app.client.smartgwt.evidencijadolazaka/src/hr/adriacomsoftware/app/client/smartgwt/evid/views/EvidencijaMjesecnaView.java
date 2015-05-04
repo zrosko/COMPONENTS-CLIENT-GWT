@@ -135,9 +135,9 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 			protected String getCellCSSText(ListGridRecord record, int rowNum, int colNum) {
 				if (getFieldName(colNum).equals(EVIDMJ__UKUPNI_BROJ_SATI) && record.getAttribute(EVIDMJ__UKUPNI_BROJ_SATI)!=null) {  
 						return "color:#15428B;";  
-				}/*else if (getFieldName(colNum).equals(EVIDMJ__SATI_REDOVNI_I_PRAZNICI) && record.getAttribute(EVIDMJ__SATI_REDOVNI_I_PRAZNICI)!=null) {  
+				}else if (getFieldName(colNum).equals(EVIDMJ__SATI_REDOVNI_I_PRAZNICI) && record.getAttribute(EVIDMJ__SATI_REDOVNI_I_PRAZNICI)!=null) {  
 					return "color:#118833;";  
-				}*/else if (getFieldName(colNum).equals("napomena_spica") && record.getAttribute("napomena_spica")!=null) {  
+				}else if (getFieldName(colNum).equals("napomena_spica") && record.getAttribute("napomena_spica")!=null) {  
 					if (!record.getAttribute("napomena_spica").startsWith("0")||  record.getAttribute("napomena_spica").contains("Trajanje 1")
 							||  record.getAttribute("napomena_spica").contains("Trajanje 00:00")) {  
 						return "color:red;";  

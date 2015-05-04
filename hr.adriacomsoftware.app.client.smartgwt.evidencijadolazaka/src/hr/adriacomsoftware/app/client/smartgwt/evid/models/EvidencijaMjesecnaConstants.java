@@ -54,7 +54,7 @@ public interface EvidencijaMjesecnaConstants {
 	public static String EVIDMJ__SIF_23_1 = "sif_23_1";
 	public static String EVIDMJ__SIF_23_0 = "sif_23_0";
 	public static String EVIDMJ__SIF_999 = "sif_999";
-	public static String EVIDMJ__SATI_REDOVNI_I_PRAZNICI = "evidmj__sati_redovni_i_praznici";
+	public static String EVIDMJ__SATI_REDOVNI_I_PRAZNICI = "sati_redovni_i_praznici";
 
 	public static String EVIDMJ__MJESEC = "mjesec";
 	public static String EVIDMJ__GODINA = "godina";
