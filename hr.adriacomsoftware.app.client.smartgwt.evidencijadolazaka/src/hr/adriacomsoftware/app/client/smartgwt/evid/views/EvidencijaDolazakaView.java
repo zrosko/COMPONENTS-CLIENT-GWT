@@ -220,6 +220,7 @@ public class EvidencijaDolazakaView extends AS2View2 implements  EvidencijaDolaz
 		listGrid.setSaveByCell(false);
 		listGrid.setAutoSaveEdits(false);
 		
+		
 		Criteria criteria = _form.getValuesAsCriteria();
 		listGrid.setCriteria(criteria);
 		

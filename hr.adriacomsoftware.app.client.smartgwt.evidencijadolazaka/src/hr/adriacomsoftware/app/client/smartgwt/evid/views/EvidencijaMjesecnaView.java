@@ -135,7 +135,9 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 			protected String getCellCSSText(ListGridRecord record, int rowNum, int colNum) {
 				if (getFieldName(colNum).equals(EVIDMJ__UKUPNI_BROJ_SATI) && record.getAttribute(EVIDMJ__UKUPNI_BROJ_SATI)!=null) {  
 						return "color:#15428B;";  
-				}else if (getFieldName(colNum).equals("napomena_spica") && record.getAttribute("napomena_spica")!=null) {  
+				}/*else if (getFieldName(colNum).equals(EVIDMJ__SATI_REDOVNI_I_PRAZNICI) && record.getAttribute(EVIDMJ__SATI_REDOVNI_I_PRAZNICI)!=null) {  
+					return "color:#118833;";  
+				}*/else if (getFieldName(colNum).equals("napomena_spica") && record.getAttribute("napomena_spica")!=null) {  
 					if (!record.getAttribute("napomena_spica").startsWith("0")||  record.getAttribute("napomena_spica").contains("Trajanje 1")
 							||  record.getAttribute("napomena_spica").contains("Trajanje 00:00")) {  
 						return "color:red;";  
@@ -153,6 +155,8 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 		listGrid.setShowRowNumbers(true);
 		listGrid.setShowResizeBar(false);
 		listGrid.setBaseStyle("myBoxedGridCell");
+		listGrid.setHeaderHeight(50);
+		listGrid.setWrapHeaderTitles(true);
 		
 		// filtering
 		listGrid.setShowFilterEditor(true);
@@ -187,79 +191,83 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 		naziv.getField().setFrozen(true);  
 		AS2ListGridField datum_od = new AS2ListGridField(EVIDMJ__DATUM_OD);
 		AS2ListGridField datum_do = new AS2ListGridField(EVIDMJ__DATUM_DO);
-		AS2ListGridField broj_dana_rada = new AS2ListGridField(EVIDMJ__BROJ_DANA_RADA,"100");
+		AS2ListGridField broj_dana_rada = new AS2ListGridField(EVIDMJ__BROJ_DANA_RADA,"50");
 		broj_dana_rada.getField().setFrozen(true);
-		AS2ListGridField ukupni_broj_sati = new AS2ListGridField(EVIDMJ__UKUPNI_BROJ_SATI,"60");
+		AS2ListGridField ukupni_broj_sati = new AS2ListGridField(EVIDMJ__UKUPNI_BROJ_SATI,"50");
 		ukupni_broj_sati.getField().setFrozen(true);
-		AS2ListGridField sif_01 = new AS2ListGridField(EVIDMJ__SIF_01,"60");
+		AS2ListGridField sif_01 = new AS2ListGridField(EVIDMJ__SIF_01,"50");
 //		sif_01.getField().setPrompt("Location of seat of government");
-		AS2ListGridField sif_01_10 = new AS2ListGridField(EVIDMJ__SIF_01_10,"60");
-		AS2ListGridField sif_03 = new AS2ListGridField(EVIDMJ__SIF_03,"60");
-		AS2ListGridField sif_10 = new AS2ListGridField(EVIDMJ__SIF_10,"60");
-		AS2ListGridField sif_12 = new AS2ListGridField(EVIDMJ__SIF_12,"60");
-		AS2ListGridField sif_23 = new AS2ListGridField(EVIDMJ__SIF_23,"60");
-		AS2ListGridField sif_09 = new AS2ListGridField(EVIDMJ__SIF_09,"60");
-		AS2ListGridField sif_01_11 = new AS2ListGridField(EVIDMJ__SIF_01_11,"60");
-		AS2ListGridField sif_01_12 = new AS2ListGridField(EVIDMJ__SIF_01_12,"60");
-		AS2ListGridField sif_01_13 = new AS2ListGridField(EVIDMJ__SIF_01_13,"60");
-		AS2ListGridField sif_27 = new AS2ListGridField(EVIDMJ__SIF_27,"60");
-		AS2ListGridField sif_01_5 = new AS2ListGridField(EVIDMJ__SIF_01_5,"60");
-		AS2ListGridField sif_02_2 = new AS2ListGridField(EVIDMJ__SIF_02_2,"60");
-		AS2ListGridField sif_14_2 = new AS2ListGridField(EVIDMJ__SIF_14_2,"60");
-		AS2ListGridField sif_14_1 = new AS2ListGridField(EVIDMJ__SIF_14_1,"60");
-		AS2ListGridField sif_01_3 = new AS2ListGridField(EVIDMJ__SIF_01_3,"60");
-		AS2ListGridField sif_15_2 = new AS2ListGridField(EVIDMJ__SIF_15_2,"60");
-		AS2ListGridField sif_01_32 = new AS2ListGridField(EVIDMJ__SIF_01_32,"60");
-		AS2ListGridField sif_01_30 = new AS2ListGridField(EVIDMJ__SIF_01_30,"60");
-		AS2ListGridField sif_01_31 = new AS2ListGridField(EVIDMJ__SIF_01_31,"60");
-		AS2ListGridField sif_14 = new AS2ListGridField(EVIDMJ__SIF_14,"60");
-		AS2ListGridField sif_01_6 = new AS2ListGridField(EVIDMJ__SIF_01_6,"60");
-		AS2ListGridField sif_15_1 = new AS2ListGridField(EVIDMJ__SIF_15_1,"60");
-		AS2ListGridField sif_01_99 = new AS2ListGridField(EVIDMJ__SIF_01_99,"60");
-		AS2ListGridField sif_12_1 = new AS2ListGridField(EVIDMJ__SIF_12_1,"60");
-		AS2ListGridField sif_11 = new AS2ListGridField(EVIDMJ__SIF_11,"60");
-		AS2ListGridField sif_15 = new AS2ListGridField(EVIDMJ__SIF_15,"60");
-		AS2ListGridField sif_17 = new AS2ListGridField(EVIDMJ__SIF_17,"60");
-		AS2ListGridField sif_22 = new AS2ListGridField(EVIDMJ__SIF_22,"60");
-		AS2ListGridField sif_01_1 = new AS2ListGridField(EVIDMJ__SIF_01_1,"60");
-		AS2ListGridField sif_01_2 = new AS2ListGridField(EVIDMJ__SIF_01_2,"60");
-		AS2ListGridField sif_27_2 = new AS2ListGridField(EVIDMJ__SIF_27_2,"60");
-		AS2ListGridField sif_03_2 = new AS2ListGridField(EVIDMJ__SIF_03_2,"60");
-		AS2ListGridField sif_01_71 = new AS2ListGridField(EVIDMJ__SIF_01_71,"60");
-		AS2ListGridField sif_01_72 = new AS2ListGridField(EVIDMJ__SIF_01_72,"60");
-		AS2ListGridField sif_12_2 = new AS2ListGridField(EVIDMJ__SIF_12_2,"60");
-		AS2ListGridField sif_18 = new AS2ListGridField(EVIDMJ__SIF_18,"60");
-		AS2ListGridField sif_01_4 = new AS2ListGridField(EVIDMJ__SIF_01_4,"60");
-		AS2ListGridField sif_12_3 = new AS2ListGridField(EVIDMJ__SIF_12_3,"60");
-		AS2ListGridField sif_01_8 = new AS2ListGridField(EVIDMJ__SIF_01_8,"60");
-		AS2ListGridField sif_15_0 = new AS2ListGridField(EVIDMJ__SIF_15_0,"60");
-		AS2ListGridField sif_12_0 = new AS2ListGridField(EVIDMJ__SIF_12_0,"60");
-		AS2ListGridField sif_12_4 = new AS2ListGridField(EVIDMJ__SIF_12_4,"60");
-		AS2ListGridField sif_23_1 = new AS2ListGridField(EVIDMJ__SIF_23_1,"60");
-		AS2ListGridField sif_999 = new AS2ListGridField(EVIDMJ__SIF_999,"60");
+		AS2ListGridField sif_01_10 = new AS2ListGridField(EVIDMJ__SIF_01_10,"50");
+		AS2ListGridField sif_03 = new AS2ListGridField(EVIDMJ__SIF_03,"50");
+		AS2ListGridField sif_10 = new AS2ListGridField(EVIDMJ__SIF_10,"50");
+		AS2ListGridField sif_12 = new AS2ListGridField(EVIDMJ__SIF_12,"50");
+		AS2ListGridField sif_23 = new AS2ListGridField(EVIDMJ__SIF_23,"50");
+		AS2ListGridField sif_09 = new AS2ListGridField(EVIDMJ__SIF_09,"50");
+		AS2ListGridField sif_01_11 = new AS2ListGridField(EVIDMJ__SIF_01_11,"50");
+		AS2ListGridField sif_01_12 = new AS2ListGridField(EVIDMJ__SIF_01_12,"50");
+		AS2ListGridField sif_01_13 = new AS2ListGridField(EVIDMJ__SIF_01_13,"50");
+		AS2ListGridField sif_27 = new AS2ListGridField(EVIDMJ__SIF_27,"50");
+		AS2ListGridField sif_01_5 = new AS2ListGridField(EVIDMJ__SIF_01_5,"50");
+		AS2ListGridField sif_02_2 = new AS2ListGridField(EVIDMJ__SIF_02_2,"50");
+		AS2ListGridField sif_14_2 = new AS2ListGridField(EVIDMJ__SIF_14_2,"50");
+		AS2ListGridField sif_14_1 = new AS2ListGridField(EVIDMJ__SIF_14_1,"50");
+		AS2ListGridField sif_01_3 = new AS2ListGridField(EVIDMJ__SIF_01_3,"50");
+		AS2ListGridField sif_15_2 = new AS2ListGridField(EVIDMJ__SIF_15_2,"50");
+		AS2ListGridField sif_01_32 = new AS2ListGridField(EVIDMJ__SIF_01_32,"50");
+		AS2ListGridField sif_01_30 = new AS2ListGridField(EVIDMJ__SIF_01_30,"50");
+		AS2ListGridField sif_01_31 = new AS2ListGridField(EVIDMJ__SIF_01_31,"50");
+		AS2ListGridField sif_14 = new AS2ListGridField(EVIDMJ__SIF_14,"50");
+		AS2ListGridField sif_01_6 = new AS2ListGridField(EVIDMJ__SIF_01_6,"50");
+		AS2ListGridField sif_15_1 = new AS2ListGridField(EVIDMJ__SIF_15_1,"50");
+		AS2ListGridField sif_01_99 = new AS2ListGridField(EVIDMJ__SIF_01_99,"50");
+		AS2ListGridField sif_12_1 = new AS2ListGridField(EVIDMJ__SIF_12_1,"50");
+		AS2ListGridField sif_11 = new AS2ListGridField(EVIDMJ__SIF_11,"50");
+		AS2ListGridField sif_15 = new AS2ListGridField(EVIDMJ__SIF_15,"50");
+		AS2ListGridField sif_17 = new AS2ListGridField(EVIDMJ__SIF_17,"50");
+		AS2ListGridField sif_22 = new AS2ListGridField(EVIDMJ__SIF_22,"50");
+		AS2ListGridField sif_01_1 = new AS2ListGridField(EVIDMJ__SIF_01_1,"50");
+		AS2ListGridField sif_01_2 = new AS2ListGridField(EVIDMJ__SIF_01_2,"50");
+		AS2ListGridField sif_27_2 = new AS2ListGridField(EVIDMJ__SIF_27_2,"50");
+		AS2ListGridField sif_03_2 = new AS2ListGridField(EVIDMJ__SIF_03_2,"50");
+		AS2ListGridField sif_01_71 = new AS2ListGridField(EVIDMJ__SIF_01_71,"50");
+		AS2ListGridField sif_01_72 = new AS2ListGridField(EVIDMJ__SIF_01_72,"50");
+		AS2ListGridField sif_12_2 = new AS2ListGridField(EVIDMJ__SIF_12_2,"50");
+		AS2ListGridField sif_18 = new AS2ListGridField(EVIDMJ__SIF_18,"50");
+		AS2ListGridField sif_01_4 = new AS2ListGridField(EVIDMJ__SIF_01_4,"50");
+		AS2ListGridField sif_12_3 = new AS2ListGridField(EVIDMJ__SIF_12_3,"50");
+		AS2ListGridField sif_01_8 = new AS2ListGridField(EVIDMJ__SIF_01_8,"50");
+		AS2ListGridField sif_15_0 = new AS2ListGridField(EVIDMJ__SIF_15_0,"50");
+		AS2ListGridField sif_12_0 = new AS2ListGridField(EVIDMJ__SIF_12_0,"50");
+		AS2ListGridField sif_12_4 = new AS2ListGridField(EVIDMJ__SIF_12_4,"50");
+		AS2ListGridField sif_23_1 = new AS2ListGridField(EVIDMJ__SIF_23_1,"50");
+		AS2ListGridField sif_23_0 = new AS2ListGridField(EVIDMJ__SIF_23_0,"50");
+		AS2ListGridField sif_999 = new AS2ListGridField(EVIDMJ__SIF_999,"50");
 		
-		AS2ListGridField mjesec = new AS2ListGridField(EVIDMJ__MJESEC,"60");
-		AS2ListGridField godina = new AS2ListGridField(EVIDMJ__GODINA,"60");
+		AS2ListGridField sati_redovni_i_praznici = new AS2ListGridField(EVIDMJ__SATI_REDOVNI_I_PRAZNICI,"50");
+		
+		AS2ListGridField mjesec = new AS2ListGridField(EVIDMJ__MJESEC,"50");
+		AS2ListGridField godina = new AS2ListGridField(EVIDMJ__GODINA,"50");
 		
 		listGrid.setFields(radnik_id, id_spica_oj, naziv, datum_od, datum_do,
-				broj_dana_rada, ukupni_broj_sati, sif_01, sif_01_10, sif_03,
-				sif_10, sif_12, sif_23, sif_09, sif_01_11, sif_01_12, sif_01_13, sif_27,
-				sif_01_5, sif_02_2, sif_14_2, sif_14_1, sif_01_3, sif_15_2,
-				sif_01_32, sif_01_30, sif_01_31, sif_14, sif_01_6, sif_15_1,
-				sif_01_99, sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_23,
-				sif_01_1, sif_01_2, sif_27_2, sif_03_2, sif_01_71, sif_01_72,
-				sif_12_2, sif_18, sif_01_4, sif_12_3, sif_01_8, sif_15_0,
-				sif_12_0, sif_12_4, sif_23_1, sif_999, mjesec, godina);
+				broj_dana_rada, ukupni_broj_sati, sati_redovni_i_praznici,
+				sif_01, sif_01_10, sif_03, sif_10, sif_12, sif_23, sif_09,
+				sif_01_11, sif_01_12, sif_01_13, sif_23_0, sif_14, sif_14_1,
+				sif_14_2, sif_15_2, sif_27, sif_01_5, sif_02_2, sif_01_3,
+				sif_01_32, sif_01_30, sif_01_31, sif_01_6, sif_15_1, sif_01_99,
+				sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_01_1,
+				sif_01_2, sif_27_2, sif_03_2, sif_01_71, sif_01_72, sif_12_2,
+				sif_18, sif_01_4, sif_12_3, sif_01_8, sif_15_0, sif_12_0,
+				sif_12_4, sif_23_1, sif_999, mjesec, godina);
 
 		listGrid.setAlignFields(Alignment.CENTER, broj_dana_rada,
 				ukupni_broj_sati, sif_01, sif_01_10, sif_03, sif_10, sif_12,
 				sif_23, sif_09, sif_01_11, sif_01_12, sif_01_13, sif_27, sif_01_5,
 				sif_02_2, sif_14_2, sif_14_1, sif_01_3, sif_15_2, sif_01_32,
 				sif_01_30, sif_01_31, sif_14, sif_01_6, sif_15_1, sif_01_99,
-				sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_23, sif_01_1,
+				sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_01_1,
 				sif_01_2, sif_27_2, sif_03_2, sif_01_71, sif_01_72, sif_12_2,
 				sif_18, sif_01_4, sif_12_3, sif_01_8, sif_15_0, sif_12_0,
-				sif_12_4, sif_23_1, sif_999);
+				sif_12_4, sif_23_1,sif_23_0, sif_999, sati_redovni_i_praznici);
 		
 		listGrid.setHiddenFields(true, radnik_id, /*organizacijska_jedinica_id,*/
 				id_spica_oj, datum_od, datum_do, mjesec, godina);
@@ -282,10 +290,10 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 				sif_23, sif_09, sif_01_11, sif_01_12, sif_01_13, sif_27, sif_01_5,
 				sif_02_2, sif_14_2, sif_14_1, sif_01_3, sif_15_2, sif_01_32,
 				sif_01_30, sif_01_31, sif_14, sif_01_6, sif_15_1, sif_01_99,
-				sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_23, sif_01_1,
+				sif_12_1, sif_11, sif_15, sif_17, sif_22, sif_01_1,
 				sif_01_2, sif_27_2, sif_03_2, sif_01_71, sif_01_72, sif_12_2,
 				sif_18, sif_01_4, sif_12_3, sif_01_8, sif_15_0, sif_12_0,
-				sif_12_4, sif_23_1);
+				sif_12_4, sif_23_1,sif_23_0);
 		
 		//handlers
 		listGrid.addRecordDoubleClickHandler(new RecordDoubleClickHandler() {
@@ -294,7 +302,54 @@ public class EvidencijaMjesecnaView extends AS2View2 implements  EvidencijaMjese
 				editRecord();
 			}
 		});
-
+		
+		//prompts
+		sif_01.getField().setPrompt("REDOVNI RAD");
+		sif_01_10.getField().setPrompt("GODIŠNJI ODMOR");
+		sif_03.getField().setPrompt("POPODNEVNI RAD");
+		sif_10.getField().setPrompt("BOLOVANJE NA TERET POSLODAVCA 90%");
+		sif_12.getField().setPrompt("BOLOVANJE PREKO 42 DANA");
+		sif_23.getField().setPrompt("RAD NA DRŽAVNI PRAZNIK");
+		sif_09.getField().setPrompt("RAD NEDJELJOM");
+		sif_01_11.getField().setPrompt("SLUŽBENI PUT");
+		sif_01_12.getField().setPrompt("PLACENI DOPUST");
+		sif_01_13.getField().setPrompt("SLOBODAN DAN");
+		sif_27.getField().setPrompt("PREKOVREMENI RAD");
+		sif_01_5.getField().setPrompt("JUBILARNA NAGRADA");
+		sif_02_2.getField().setPrompt("KORIŠTENJE SLUŽBENOG AUTOMOBILA U PRIVATNE SVRHE");
+		sif_14_2.getField().setPrompt("KOMPLIKACIJE U TRUDNOCI");
+		sif_14_1.getField().setPrompt("RODITELJSKI DOPUST");
+		sif_01_3.getField().setPrompt("CLAN UPRAVE");
+		sif_15_2.getField().setPrompt("DOPUST ZA NJEGU DJETETA DO 8.GOD.");
+		sif_01_32.getField().setPrompt("ZAMJENIK PREDSJEDNIKA UPRAVE");
+		sif_01_30.getField().setPrompt("PREDSJEDNIK UPRAVE");
+		sif_01_31.getField().setPrompt("SAVJETNIK UPRAVE");
+		sif_14.getField().setPrompt("RODILJNI DOPUST - do 6 mj");
+		sif_01_6.getField().setPrompt("OTPREMNINA");
+		sif_15_1.getField().setPrompt("KUCNA NJEGA CLANA OBITELJI ILI DJETETA STAR. OD 3 G.");
+		sif_01_99.getField().setPrompt("KOREKCIJA OD");
+		sif_12_1.getField().setPrompt("BOL.HZZO - 6 -12MJ");
+		sif_11.getField().setPrompt("BOLOVANJE NA TERET POSLODAVCA 100%");
+		sif_15.getField().setPrompt("KUCNA NJEGA DIJETE DO 3 GODINE");
+		sif_17.getField().setPrompt("NEPLACENI DOPUST");
+		sif_22.getField().setPrompt("NOCNI RAD");
+		sif_01_1.getField().setPrompt("STIMULACIJA");
+		sif_01_2.getField().setPrompt("REDOVNI RAD NA ODREÐENO VRIJEME");
+		sif_27_2.getField().setPrompt("PREKOVREMENI ODREÐENO");
+		sif_03_2.getField().setPrompt("POPODNEVNI ODREÐENO");
+		sif_01_71.getField().setPrompt("CLAN NADZORNOG ODBORA-ŠIBENIK");
+		sif_01_72.getField().setPrompt("CLAN NADZORNOG ODBORA-ZAGREB");
+		sif_12_2.getField().setPrompt("BOLOVANJE OZLJEDA NA RADU 100%");
+		sif_18.getField().setPrompt("NEOPRAVDANI IZOSTANAK");
+		sif_01_4.getField().setPrompt("BOŽICNICA");
+		sif_12_3.getField().setPrompt("BOLOVANJE POSLJED.SUDJEL.U DOMOV.RATU");
+		sif_01_8.getField().setPrompt("REDOVNI RAD RAZLIKA");
+		sif_15_0.getField().setPrompt("KOREKCIJA BOLOV.-KUCNA NJEGA DIJET.DO 3 GOD");
+		sif_12_0.getField().setPrompt("KOREKCIJA - BOLOVANJE PREKO 42 DANA");
+		sif_12_4.getField().setPrompt("KOREKCIJA BOLOVANJE 100%");
+		sif_23_1.getField().setPrompt("SLUŽBENI PUT NA DRŽAVNI PRAZNIK");
+		sif_23_0.getField().setPrompt("DRŽAVNI PRAZNIK");
+		
 		return listGrid;
 	}
 	

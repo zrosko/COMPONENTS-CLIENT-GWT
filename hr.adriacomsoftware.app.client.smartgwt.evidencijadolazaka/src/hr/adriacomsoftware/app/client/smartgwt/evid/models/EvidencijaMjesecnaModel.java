@@ -26,7 +26,7 @@ public class EvidencijaMjesecnaModel extends AS2RestJSONDataSource implements Ev
 		AS2DataSourceField naziv = new AS2DataSourceField(EVIDMJ__NAZIV,AS2Field.TEXT,"Djelatnik");
 		AS2DataSourceField datum_od = new AS2DataSourceField(EVIDMJ__DATUM_OD,AS2Field.DATE,"Datum od");
 		AS2DataSourceField datum_do = new AS2DataSourceField(EVIDMJ__DATUM_DO,AS2Field.DATE,"Datum do");
-		AS2DataSourceField broj_dana_rada = new AS2DataSourceField(EVIDMJ__BROJ_DANA_RADA,AS2Field.INTEGER,"Uk.rad.dana");
+		AS2DataSourceField broj_dana_rada = new AS2DataSourceField(EVIDMJ__BROJ_DANA_RADA,AS2Field.INTEGER,"Uk.rad. dana");
 		AS2DataSourceField ukupni_broj_sati = new AS2DataSourceField(EVIDMJ__UKUPNI_BROJ_SATI,AS2Field.INTEGER,"Uk.sati");
 		AS2DataSourceField sif_01 = new AS2DataSourceField(EVIDMJ__SIF_01,AS2Field.INTEGER,"01");
 		AS2DataSourceField sif_01_10 = new AS2DataSourceField(EVIDMJ__SIF_01_10,AS2Field.INTEGER,"01_10");
@@ -72,7 +72,9 @@ public class EvidencijaMjesecnaModel extends AS2RestJSONDataSource implements Ev
 		AS2DataSourceField sif_12_0 = new AS2DataSourceField(EVIDMJ__SIF_12_0,AS2Field.INTEGER,"12_0");
 		AS2DataSourceField sif_12_4 = new AS2DataSourceField(EVIDMJ__SIF_12_4,AS2Field.INTEGER,"12_4");
 		AS2DataSourceField sif_23_1 = new AS2DataSourceField(EVIDMJ__SIF_23_1,AS2Field.INTEGER,"23_1");
+		AS2DataSourceField sif_23_0 = new AS2DataSourceField(EVIDMJ__SIF_23_0,AS2Field.INTEGER,"23_0");
 		AS2DataSourceField sif_999 = new AS2DataSourceField(EVIDMJ__SIF_999,AS2Field.INTEGER,"999");
+		AS2DataSourceField sati_redovni_i_praznici = new AS2DataSourceField(EVIDMJ__SATI_REDOVNI_I_PRAZNICI,AS2Field.TEXT,"Sati redovni / praznici");
 		
 		AS2DataSourceField mjesec = new AS2DataSourceField(EVIDMJ__MJESEC,AS2Field.TEXT,"Mjesec");
 //		LinkedHashMap<String, Object> map = new LinkedHashMap<>();
@@ -92,8 +94,8 @@ public class EvidencijaMjesecnaModel extends AS2RestJSONDataSource implements Ev
 				sif_01_6, sif_15_1, sif_01_99, sif_12_1, sif_11, sif_15,
 				sif_17, sif_22, sif_01_1, sif_01_2, sif_27_2, sif_03_2,
 				sif_01_71, sif_01_72, sif_12_2, sif_18, sif_01_4, sif_12_3,
-				sif_01_8, sif_15_0, sif_12_0, sif_12_4, sif_23_1, sif_999,
-				mjesec, godina);
+				sif_01_8, sif_15_0, sif_12_0, sif_12_4, sif_23_1, sif_23_0,
+				sif_999, sati_redovni_i_praznici, mjesec, godina);
 	}
 	
 //	@Override
